@@ -5,9 +5,9 @@ const Footer = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            site {
+            site{
                 siteMetadata{
-                    author
+                    name
                 }
             }
         }
@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <footer>
             <p>
-                Createed by {data.site.siteMetadata.author}, © 2019
+                Createed by {data.site.siteMetadata.name}, © 2019
             </p>
         </footer>
     )
